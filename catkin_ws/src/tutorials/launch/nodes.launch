@@ -1,0 +1,13 @@
+<launch>
+    <group ns="namespace1">
+        <node pkg="tutorials" name="talker" type="str_talker.py"/>
+        <node pkg="tutorials" name="listener" type="str_listener.py"/>
+    </group>
+
+    <group ns="namespace2">
+        <node pkg="tutorials" name="talker" type="per_talker.py">
+        <remap from="people" to="name"/>
+        </node>
+        <node pkg="tutorials" name="listener" type="per_listener.py"/>
+    </group> 
+</launch>
